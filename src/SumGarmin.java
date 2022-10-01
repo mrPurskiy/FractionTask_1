@@ -11,7 +11,7 @@ public class SumGarmin {
     public Fraction sum()
     {
         Fraction result = new Fraction();
-        for(int i = 1;i <= n;++i)
+        for(int i = 1;i <= n;i++)
         {
             result = result.add(new Fraction(1,i));
         }

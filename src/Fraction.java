@@ -6,7 +6,10 @@ public class Fraction {
         numerator = 0;
         denominator = 1;
     }
-
+    public Fraction(Fraction element) {
+        this.numerator = element.numerator;
+        this.denominator = element.denominator;
+    }
     public Fraction(int numerator, int denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
@@ -48,7 +51,10 @@ public void reduce() {
         int nsd_value =  MyMaths.nsd(numerator,denominator);
         numerator /= nsd_value;
         denominator /= nsd_value;
-    System.out.println(numerator+ "    " + denominator);
+
+
+
+    System.out.println(numerator+ "/" + denominator);
 }
 
 
@@ -58,4 +64,5 @@ public void reduce() {
         result.reduce();
         return result;
     }
+
 }
