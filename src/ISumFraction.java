@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public interface ISumFraction {
+public interface ISumFraction {
+    ISumFraction calculate();
+    ISumFraction add(ISumFraction element);
 }

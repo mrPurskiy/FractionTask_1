@@ -1,4 +1,4 @@
-public class Fraction {
+public class Fraction implements ISumFraction{
     private int numerator;
     private int denominator;
 
@@ -58,11 +58,17 @@ public void reduce() {
 }
 
 
-    public Fraction add(Fraction element)
-    {
+//    public Fraction add(Fraction element)
+//    {
+//        Fraction result = new Fraction(numerator*element.getDenominator() + denominator* element.getNumerator() ,denominator*element.getDenominator());
+//        result.reduce();
+//        return result;
+//    }
+
+    @Override
+    public ISumFraction add(ISumFraction element) {
         Fraction result = new Fraction(numerator*element.getDenominator() + denominator* element.getNumerator() ,denominator*element.getDenominator());
         result.reduce();
         return result;
     }
-
 }
