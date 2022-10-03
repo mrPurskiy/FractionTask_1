@@ -58,17 +58,16 @@ public void reduce() {
 }
 
 
-//    public Fraction add(Fraction element)
-//    {
-//        Fraction result = new Fraction(numerator*element.getDenominator() + denominator* element.getNumerator() ,denominator*element.getDenominator());
-//        result.reduce();
-//        return result;
-//    }
-
-    @Override
-    public ISumFraction add(ISumFraction element) {
+    public Fraction add(Fraction element)
+    {
         Fraction result = new Fraction(numerator*element.getDenominator() + denominator* element.getNumerator() ,denominator*element.getDenominator());
         result.reduce();
         return result;
+    }
+
+
+    @Override
+    public ISumFraction add(ISumFraction element) {
+        return this.add((Fraction) element);
     }
 }

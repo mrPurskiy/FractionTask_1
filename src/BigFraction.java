@@ -1,6 +1,6 @@
 import java.math.BigInteger;
 
-public class BigFraction {
+public class BigFraction implements ISumFraction{
     private BigInteger numerator;
     private BigInteger denominator;
 
@@ -55,4 +55,8 @@ public class BigFraction {
         return result;
     }
 
+    @Override
+    public ISumFraction add(ISumFraction element) {
+        return this.add((BigFraction) element);
+    }
 }
