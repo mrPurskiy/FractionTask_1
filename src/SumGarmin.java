@@ -12,7 +12,7 @@ public class SumGarmin  {
     }
     public ISumFraction calculate() {
         ISumFraction result;
-        if (n<20) {
+        if (n<15) {
              result = new Fraction();
             for (int i = 1; i <= n; i++) {
                 result = result.add(new Fraction(1, i));

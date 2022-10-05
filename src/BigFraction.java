@@ -59,4 +59,10 @@ public class BigFraction implements ISumFraction{
     public ISumFraction add(ISumFraction element) {
         return this.add((BigFraction) element);
     }
+    public BigFraction multiply(BigFraction element)
+    {
+        BigFraction result = new BigFraction(numerator.multiply(element.getNumerator()),denominator.multiply(element.getDenominator()));
+        result.reduce();
+        return result;
+    }
 }
